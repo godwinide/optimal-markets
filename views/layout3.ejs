@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>Dashboard</title>
+    <title>Optimal Markets | Dashboard</title>
+    <!-- plugins:css -->
     <link
       rel="stylesheet"
       href="/dashboard/assets/vendors/mdi/css/materialdesignicons.min.css"
@@ -15,6 +17,8 @@
       rel="stylesheet"
       href="/dashboard/assets/vendors/css/vendor.bundle.base.css"
     />
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
     <link
       rel="stylesheet"
       href="/dashboard/assets/vendors/jvectormap/jquery-jvectormap.css"
@@ -31,22 +35,15 @@
       rel="stylesheet"
       href="/dashboard/assets/vendors/owl-carousel-2/owl.theme.default.min.css"
     />
+
     <link
       rel="stylesheet"
       href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap4.min.css"
     />
+
     <link rel="stylesheet" href="/dashboard/assets/css/style.css" />
+    <!-- End layout styles -->
     <link rel="shortcut icon" href="/dashboard/assets/images/favicon.png" />
-    <style>
-      #copyButton {
-        padding: 10px;
-        cursor: pointer;
-        background-color: #4caf50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-      }
-    </style>
   </head>
   <body>
     <div class="container-scroller">
@@ -54,13 +51,17 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div
           class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top"
-        ></div>
+        >
+          <a class="sidebar-brand brand-logo text-white" href="/dashboard"
+            >Optimal Markets</a
+          >
+        </div>
         <ul class="nav">
           <li class="nav-item nav-category">
             <span class="nav-link">Menu</span>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="/admin">
+            <a class="nav-link" href="/dashboard">
               <span class="menu-icon">
                 <i class="mdi mdi-speedometer"></i>
               </span>
@@ -68,7 +69,31 @@
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="/admin/settings">
+            <a class="nav-link" href="/deposit">
+              <span class="menu-icon">
+                <i class="mdi mdi-cash"></i>
+              </span>
+              <span class="menu-title">Deposit</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="/withdraw">
+              <span class="menu-icon">
+                <i class="mdi mdi-cash"></i>
+              </span>
+              <span class="menu-title">Withdraw</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="/history">
+              <span class="menu-icon">
+                <i class="mdi mdi-history"></i>
+              </span>
+              <span class="menu-title">Transactions</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="/settings">
               <span class="menu-icon">
                 <i class="mdi mdi-settings"></i>
               </span>
@@ -171,29 +196,5 @@
     <!-- Custom js for this page -->
     <script src="/dashboard/assets/js/dashboard.js"></script>
     <!-- End custom js for this page -->
-
-    <script>
-      function copyToClipboard(index) {
-        // Get the input element
-        const copyInput = document.querySelectorAll(".copyInput")[index];
-
-        // Select the text in the input element
-        copyInput.select();
-        copyInput.setSelectionRange(0, 99999); // For mobile devices
-
-        // Copy the text to the clipboard
-        document.execCommand("copy");
-
-        // Deselect the text
-        copyInput.setSelectionRange(0, 0);
-
-        // Provide some visual feedback (you can customize this part)
-        const copyButton = document.querySelectorAll(".copyButton")[index];
-        copyButton.innerText = "Copied!";
-        setTimeout(() => {
-          copyButton.innerText = "Copy to Clipboard";
-        }, 1500);
-      }
-    </script>
   </body>
 </html>
